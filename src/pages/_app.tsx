@@ -1,5 +1,6 @@
 import '@/styles/tailwind.css'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import type { AppProps } from 'next/app'
 import { useEffect, useRef } from 'react'
 
@@ -22,6 +23,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
       <main>
         <Component previousPathname={previousPathname} {...pageProps} />  
       </main>
+      <Footer />
     </div>
   )
 }
