@@ -7,11 +7,8 @@ export default function About() {
   return (
     <>
         <Head>
-            <title>About - Alphonse Pierre</title>
-            <meta
-            name="description"
-            content="I’m Aplhonse Pierre, a music critic from New York City."
-            />
+            <title>Alphonse Pierre - About</title>
+            <meta name="description" content="Aplhonse Pierre, a music critic from New York City."/>
         </Head>
         <Container className="mt-16 sm:mt-32">
             <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
