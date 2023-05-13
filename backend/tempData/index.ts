@@ -1,11 +1,17 @@
 
+interface Link {
+    id: number;
+    date: string;
+    title: string;
+    href: string;
+}
 
 interface Category {
     image: string;
     imageAlt: string;
     name: string;
     href: string;
-    links: Array<string>;
+    links: Array<Link>;
 }
 
 
@@ -15,12 +21,24 @@ const Reviews: Category = {
     name: "Reviews",
     href: "reviews",
     links: [
-        "https://pitchfork.com/reviews/albums/lil-yachty-lets-start-here/",
-        "https://pitchfork.com/reviews/albums/wu-tang-clan-wu-tang-forever/",
-        "https://pitchfork.com/reviews/albums/ceo-trayle-hh5/",
-        "https://pitchfork.com/reviews/albums/lil-baby-its-only-me/",
-        "https://pitchfork.com/reviews/albums/youngboy-never-broke-again-the-last-slimeto/",
-        "https://pitchfork.com/reviews/albums/kanye-west-donda-2-v22222-miami/"
+        {
+            id: 1,
+            date: "September 3 2021",
+            title: "Wu-Tang Clan: Wu-Tang Forever",
+            href: "https://pitchfork.com/reviews/albums/wu-tang-clan-wu-tang-forever/"
+        },
+        {
+            id: 2,
+            date: "August 27 2021",
+            title: "HH5",
+            href: "https://pitchfork.com/reviews/albums/ceo-trayle-hh5/"
+        },
+        
+        // "https://pitchfork.com/reviews/albums/wu-tang-clan-wu-tang-forever/",
+        // "https://pitchfork.com/reviews/albums/ceo-trayle-hh5/",
+        // "https://pitchfork.com/reviews/albums/lil-baby-its-only-me/",
+        // "https://pitchfork.com/reviews/albums/youngboy-never-broke-again-the-last-slimeto/",
+        // "https://pitchfork.com/reviews/albums/kanye-west-donda-2-v22222-miami/"
     ]   
 }
 
