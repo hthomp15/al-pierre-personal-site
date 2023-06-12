@@ -1,39 +1,50 @@
 import { usePathname } from 'next/navigation';
-import { Reviews, Profiles, FilmAndTv, Reported, ScenePieces } from 'backend/tempData';
+import { Reviews, Profiles, FilmAndTv, Reported, Interviews, ScenePieces, Article, Category } from 'backend/tempData';
 import { Card } from '@/components/Card';
 
 
+
+
 export default function ArticleContent() {
+
     const currentPath = usePathname();
-    let category: any;
+    let category: Category | undefined;
 
     switch (currentPath) {
         case '/reviews':
-            return category = Reviews.articles
+            category = Reviews
+            break;
         case '/profiles':
-            return category = Profiles.articles
+            category = Profiles
+            break;
         case '/film-and-tv':
-            return category = FilmAndTv.articles
+            category = FilmAndTv
+            break;
         case '/reported':
-            return category = Reported.articles
+            category = Reported
+            break;
         case '/scene-pieces':
-            return category = ScenePieces.articles
+            category = ScenePieces
+            break;
+        case '/interviews':
+            category = Interviews
+            break;
         default:
             null
     }
 
     return (
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-xl">
             <div className="flex flex-col gap-16">
-                <Card as="article">
-                    <Card.Title href={`/articles`}>
-                    </Card.Title>
-                    <Card.Eyebrow as="time" dateTime={ } decorate>
-
-                    </Card.Eyebrow>
-                    <Card.Description></Card.Description>
-                    <Card.Cta>Read article</Card.Cta>
-                </Card>
+                {category !== undefined ? category.articles.map((article: Article) => (
+                    <Card key={article.id}>
+                        <Card.Title as="h3" href={article.href}>
+                            {article.title}
+                        </Card.Title>
+                        <Card.Description>{article.description}</Card.Description>
+                        <Card.Cta>Read more</Card.Cta>
+                    </Card>
+                )) : null}
             </div>
         </div>
     )

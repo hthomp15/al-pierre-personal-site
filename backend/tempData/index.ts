@@ -1,5 +1,5 @@
 
-interface Link {
+export interface Article {
     id: number;
     date: string;
     title: string;
@@ -7,12 +7,12 @@ interface Link {
     href: string;
 }
 
-interface Category {
+export interface Category {
     image: string;
     imageAlt: string;
     name: string;
     href: string;
-    articles: Array<Link>;
+    articles: Array<Article>;
 }
 
 
@@ -72,69 +72,210 @@ const Profiles: Category = {
     imageAlt: "Profiles",
     name: "Profiles",
     href: "profiles",
-    links: [
-        "https://pitchfork.com/features/profile/bartees-strange-farm-to-table-interview/",
-        "https://pitchfork.com/features/interview/earl-sweatshirt-sick-interview/",
-        "https://pitchfork.com/features/rising/mercury-rapper-interview-tabula-rasa/",
-        "https://pitchfork.com/features/rising/staysie-atoms-interview/",
-        "https://pitchfork.com/features/rising/navy-blue-sage-elsesser-interview/",
-        "https://pitchfork.com/features/rising/bizzy-banks-is-at-the-forefront-of-brooklyn-drill-rap-next-wave/"
+    articles: [
+      {
+        id: 0,
+        date: "",
+        title: "Bartees Strange: Farm-to-Table Interview",
+        description: "",
+        href: "https://pitchfork.com/features/profile/bartees-strange-farm-to-table-interview/"
+      },
+      {
+        id: 1,
+        date: "",
+        title: "Earl Sweatshirt: Sick Interview",
+        description: "",
+        href: "https://pitchfork.com/features/interview/earl-sweatshirt-sick-interview/"
+      },
+      {
+        id: 2,
+        date: "",
+        title: "Mercury Rapper Interview: Tabula Rasa",
+        description: "",
+        href: "https://pitchfork.com/features/rising/mercury-rapper-interview-tabula-rasa/"
+      },
+      {
+        id: 3,
+        date: "",
+        title: "Staysie Atoms Interview",
+        description: "",
+        href: "https://pitchfork.com/features/rising/staysie-atoms-interview/"
+      },
+      {
+        id: 4,
+        date: "",
+        title: "Navy Blue & Sage Elsesser Interview",
+        description: "",
+        href: "https://pitchfork.com/features/rising/navy-blue-sage-elsesser-interview/"
+      },
+      {
+        id: 5,
+        date: "",
+        title: "Bizzy Banks: At the Forefront of Brooklyn Drill Rap",
+        description: "",
+        href: "https://pitchfork.com/features/rising/bizzy-banks-is-at-the-forefront-of-brooklyn-drill-rap-next-wave/"
+      }
     ]
-}
+  };
+  
 
-const Interviews: Category = {
+  const Interviews: Category = {
     image: "interviews.webp",
     imageAlt: "Interviews",
     name: "Interviews",
     href: "interviews",
-    links: [
-        "https://pitchfork.com/features/5-10-15-20/the-music-that-made-the-neptunes-chad-hugo/",
-        "https://pitchfork.com/features/cover-story/yaeji-amaarae-bartees-strange-keiyaa-angel-bat-dawid-interview/",
-        "https://pitchfork.com/thepitch/what-shannon-thornton-from-p-valley-is-listening-to/"
+    articles: [
+      {
+        id: 0,
+        date: "",
+        title: "The Music That Made The Neptunes' Chad Hugo",
+        description: "",
+        href: "https://pitchfork.com/features/5-10-15-20/the-music-that-made-the-neptunes-chad-hugo/"
+      },
+      {
+        id: 1,
+        date: "",
+        title: "Yaeji, Amaarae, Bartees Strange, KeiyaA, Angel Bat Dawid: Building a New Sound",
+        description: "",
+        href: "https://pitchfork.com/features/cover-story/yaeji-amaarae-bartees-strange-keiyaa-angel-bat-dawid-interview/"
+      },
+      {
+        id: 2,
+        date: "",
+        title: "What Shannon Thornton from P-Valley Is Listening To",
+        description: "",
+        href: "https://pitchfork.com/thepitch/what-shannon-thornton-from-p-valley-is-listening-to/"
+      }
     ]
-}
+  };
 
-const Reported: Category = {
+  const Reported: Category = {
     image: "reported.webp",
     imageAlt: "Reported",
     name: "Reported",
     href: "reported",
-    links: [
-        "https://pitchfork.com/features/article/welcome-to-the-next-generation-of-club-rap/",
-        "https://pitchfork.com/thepitch/brooklyn-drill-rap-live-bk-drip-sheff-g-fivio-foreign-pop-smoke/",
-        "https://pitchfork.com/thepitch/how-selling-and-leasing-type-beats-is-making-unknown-producers-rich/"
+    articles: [
+      {
+        id: 0,
+        date: "",
+        title: "Welcome to the Next Generation of Club Rap",
+        description: "",
+        href: "https://pitchfork.com/features/article/welcome-to-the-next-generation-of-club-rap/"
+      },
+      {
+        id: 1,
+        date: "",
+        title: "Brooklyn Drill Rap, Live From BK Drip",
+        description: "",
+        href: "https://pitchfork.com/thepitch/brooklyn-drill-rap-live-bk-drip-sheff-g-fivio-foreign-pop-smoke/"
+      },
+      {
+        id: 2,
+        date: "",
+        title: "How Selling and Leasing Type Beats Is Making Unknown Producers Rich",
+        description: "",
+        href: "https://pitchfork.com/thepitch/how-selling-and-leasing-type-beats-is-making-unknown-producers-rich/"
+      }
     ]
-}
+  };
+  
 
-const ScenePieces: Category = {
+  const ScenePieces: Category = {
     image: "scene-piece.webp",
     imageAlt: "Scene Pieces",
     name: "Scene Pieces",
     href: "scene-pieces",
-    links: [
-        "https://pitchfork.com/thepitch/detroit-is-2019s-most-important-rap-scenehere-are-the-best-songs-from-the-city-this-year/",
-        "https://pitchfork.com/features/lists-and-guides/a-guide-to-michigan-rap-2020s-most-exciting-regional-scene/",
-        "https://www.vice.com/en/article/zmxb93/youre-not-paying-attention-to-new-yorks-most-exciting-new-rap-scene",
-        "https://pitchfork.com/thepitch/milwaukee-rap-biggie-netflix-papoose-cereal/",
-        "https://pitchfork.com/features/article/2010s-drill-rap-songs/"
+    articles: [
+      {
+        id: 0,
+        date: "",
+        title: "Detroit Is 2019's Most Important Rap Scene—Here Are the Best Songs From the City This Year",
+        description: "",
+        href: "https://pitchfork.com/thepitch/detroit-is-2019s-most-important-rap-scenehere-are-the-best-songs-from-the-city-this-year/"
+      },
+      {
+        id: 1,
+        date: "",
+        title: "A Guide to Michigan Rap: 2020's Most Exciting Regional Scene",
+        description: "",
+        href: "https://pitchfork.com/features/lists-and-guides/a-guide-to-michigan-rap-2020s-most-exciting-regional-scene/"
+      },
+      {
+        id: 2,
+        date: "",
+        title: "You're Not Paying Attention to New York's Most Exciting New Rap Scene",
+        description: "",
+        href: "https://www.vice.com/en/article/zmxb93/youre-not-paying-attention-to-new-yorks-most-exciting-new-rap-scene"
+      },
+      {
+        id: 3,
+        date: "",
+        title: "Milwaukee Rap: Biggie, Netflix, Papoose, Cereal",
+        description: "",
+        href: "https://pitchfork.com/thepitch/milwaukee-rap-biggie-netflix-papoose-cereal/"
+      },
+      {
+        id: 4,
+        date: "",
+        title: "2010s Drill Rap Songs",
+        description: "",
+        href: "https://pitchfork.com/features/article/2010s-drill-rap-songs/"
+      }
     ]
-}
+  };
+  
 
-const FilmAndTv: Category = {
+  const FilmAndTv: Category = {
     image: "film-tv.webp",
     imageAlt: "Film and TV",
     name: "Film and TV",
     href: "film-and-tv",
-    links: [
-        "https://pitchfork.com/thepitch/atlanta-season-3-premiere-review/",
-        "https://pitchfork.com/thepitch/revisiting-eminems-battle-rap-fairytale-8-mile/",
-        "https://pitchfork.com/thepitch/tubi-is-somehow-the-best-video-streaming-service-for-rap-cinephiles/",
-        "https://pitchfork.com/thepitch/rap-shit-hbo-max-review/",
-        "https://pitchfork.com/thepitch/revisiting-brown-sugar-the-rom-com-that-made-hip-hop-more-than-a-tagline/",
-        "https://www.grailed.com/drycleanonly/belly-movie-style"
-
+    articles: [
+      {
+        id: 0,
+        date: "",
+        title: "Atlanta Season 3 Premiere Review",
+        description: "",
+        href: "https://pitchfork.com/thepitch/atlanta-season-3-premiere-review/"
+      },
+      {
+        id: 1,
+        date: "",
+        title: "Revisiting Eminem's Battle Rap Fairytale: 8 Mile",
+        description: "",
+        href: "https://pitchfork.com/thepitch/revisiting-eminems-battle-rap-fairytale-8-mile/"
+      },
+      {
+        id: 2,
+        date: "",
+        title: "Tubi Is Somehow the Best Video Streaming Service for Rap Cinephiles",
+        description: "",
+        href: "https://pitchfork.com/thepitch/tubi-is-somehow-the-best-video-streaming-service-for-rap-cinephiles/"
+      },
+      {
+        id: 3,
+        date: "",
+        title: "Rap Shit: HBO Max Review",
+        description: "",
+        href: "https://pitchfork.com/thepitch/rap-shit-hbo-max-review/"
+      },
+      {
+        id: 4,
+        date: "",
+        title: "Revisiting Brown Sugar: The Rom-Com That Made Hip-Hop More Than a Tagline",
+        description: "",
+        href: "https://pitchfork.com/thepitch/revisiting-brown-sugar-the-rom-com-that-made-hip-hop-more-than-a-tagline/"
+      },
+      {
+        id: 5,
+        date: "",
+        title: "Belly: Movie Style",
+        description: "",
+        href: "https://www.grailed.com/drycleanonly/belly-movie-style"
+      }
     ]
-}
+  };
+  
 
 export {
     Reviews,
