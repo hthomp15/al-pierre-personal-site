@@ -41,6 +41,9 @@ export default function ArticleContent() {
                         <Card.Title as="h3" href={article.href}>
                             {article.title}
                         </Card.Title>
+                        <Card.Eyebrow as="time" dateTime={article.date} decorate>
+                            {article.date}
+                        </Card.Eyebrow>
                         <Card.Description>{article.description}</Card.Description>
                         <Card.Cta>Read more</Card.Cta>
                     </Card>
