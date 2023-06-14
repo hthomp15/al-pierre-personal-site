@@ -96,13 +96,7 @@ interface CardEyebrowProps {
   as?: string | React.ComponentType<any>;
   decorate?: boolean;
   className?: string;
-  children: React.ReactNode;
-}
-
-interface CardEyebrowProps {
-  as?: string | React.ComponentType<any>;
-  decorate?: boolean;
-  className?: string;
+  dateTime?: string;
   children: React.ReactNode;
 }
 
