@@ -8,25 +8,26 @@ import { Card } from '@/components/Card';
 export default function ArticleContent() {
 
     const currentPath = usePathname();
+    console.log(currentPath);
     let category: Category | undefined;
 
     switch (currentPath) {
-        case '/reviews':
+        case '/reviews/':
             category = Reviews
             break;
-        case '/profiles':
+        case '/profiles/':
             category = Profiles
             break;
-        case '/film-and-tv':
+        case '/film-and-tv/':
             category = FilmAndTv
             break;
-        case '/reported':
+        case '/reported/':
             category = Reported
             break;
-        case '/scene-pieces':
+        case '/scene-pieces/':
             category = ScenePieces
             break;
-        case '/interviews':
+        case '/interviews/':
             category = Interviews
             break;
         default:

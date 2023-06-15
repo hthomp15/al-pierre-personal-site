@@ -7,14 +7,13 @@ export default function FilmAndTv() {
     const goBack = () => {
         window.history.back();
     };
-    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
     return (
         <>
             <Head>
                 <title>Alphonse Pierre - Film & TV</title>
                 <meta name="description" content="Alphonse Pierre - Film & TV" />
-                <link rel="icon" href={`${basePath}/favicon.ico`} />
+                <link rel="icon" href={`/favicon.ico`} />
             </Head>
             <div className="mx-auto mt-10 max-w-3xl px-4 sm:px-6 lg:px-8">
                 <button

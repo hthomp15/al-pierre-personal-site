@@ -41,7 +41,6 @@ const cleanString = (str: string): string => {
 
 
 const FeatureArticle = () => {
-    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
     return (
         <div className="bg-white py-24 sm:py-32 dark:bg-zinc-900 dark:ring-zinc-300/20">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -58,7 +57,7 @@ const FeatureArticle = () => {
                             >
                                 <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
                                     <img
-                                        src={`${basePath}/images/${post.imageUrl}`}
+                                        src={`/images/${post.imageUrl}`}
                                         alt={post.imageAlt}
                                         className="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
                                     />
