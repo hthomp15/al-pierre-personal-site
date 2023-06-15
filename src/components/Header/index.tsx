@@ -280,20 +280,9 @@ export default function Header() {
 
     return (
         <>
-            <header
-                className="pointer-events-none relative z-50 flex flex-col"
-                style={{
-                    height: "var(--header-height)",
-                    marginBottom: "var(--header-mb)",
-                }}
-            >
-                <div
-                    ref={headerRef}
-                    className="top-0 z-10 h-16 pt-6"
-                >
-                    <Container
-                        className="top-[var(--header-top,theme(spacing.6))] w-full"
-                    >
+            <header className="pointer-events-none relative z-50 flex flex-col max-w-7xl mx-auto">
+                <div ref={headerRef} className="top-0 z-10 h-16 pt-6">
+                    <Container className="w-full">
                         <div className="flex justify-between">
                             <div className="flex flex-col items-baseline text-start">
                                 <h1 className="text-3xl font-bold text-zinc-800 dark:text-zinc-200">
