@@ -22,3 +22,15 @@ export default function Home() {
     </>
   )
 }
+
+export const getStaticProps = async () => {
+  // Fetch data for the home page
+  return {
+    props: {},
+  };
+};
+
+export const config = {
+  // Set the base path for the route
+  basePath: '/al-pierre-personal-site',
+};
