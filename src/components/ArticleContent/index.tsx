@@ -8,7 +8,6 @@ import { Card } from '@/components/Card';
 export default function ArticleContent() {
 
     const currentPath = usePathname();
-    console.log(currentPath);
     let category: Category | undefined;
 
     switch (currentPath) {
