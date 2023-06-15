@@ -15,6 +15,47 @@ export interface Category {
     articles: Array<Article>;
 }
 
+export interface FeatureArticle {
+    id: number;
+    date: string;
+    title: string;
+    description: string;
+    href: string;
+    image: string;
+    imageAlt: string;
+    category: string;
+}
+
+
+const FeatureArticles: Array<FeatureArticle> = [ 
+    {
+        id: 0,
+        date: "February 1, 2023",
+        title: "Lil Yachty: Let's Start Here",
+        description: 'At a surprise listening event last Thursday, Lil Yachty introduced his new album Let’s Start Here., an unexpected pivot, with a few words every rap fan will find familiar: “I really wanted to be taken seriously as an artist, not just some SoundCloud rapper or some mumble rapper."',
+        href: "https://pitchfork.com/reviews/albums/lil-yachty-lets-start-here/",
+        image: "Lil-Yachty-Lets-Start-Here.webp",
+        imageAlt: "Lil Yachty",
+        // This should be lowercase for routing to the correct category
+        category: "reviews"
+    },
+    {
+        id: 1,
+        date: "September 1, 2022",
+        title: "Welcome to the Next Generation of Club Rap",
+        description: "One night in August, a nondescript metal venue in suburban New Jersey, just north of Newark, is the epicenter of one of the most exciting trends in rap right now. At first, the teens who fill the intimate space are bored, standing with their hands at their sides like Sims characters, as a series of local rappers mimic out-of-state styles.",
+        href: "https://pitchfork.com/features/article/welcome-to-the-next-generation-of-club-rap/",
+        image: "Screenshot-2023-06-14-at-9.28.59.png",
+        imageAlt: "Club Rap",
+        category: "scene-pieces"
+    },
+]
+
+
+
+
+
+
 
 const Reviews: Category = {
     image: "reviews.webp",
@@ -75,46 +116,61 @@ const Profiles: Category = {
     articles: [
       {
         id: 0,
+        date: "April 4, 2023",
+        title: "There Are Unbothered Rappers, and Then There’s Veeze",
+        description: "On the way to a studio in Midtown Manhattan, a hungry Veeze scrolls through his food delivery app and sees nothing worth eating. So, midstride, he spontaneously slips into an upscale Chinese restaurant that’s lit only by a few dim chandeliers. The 29-year-old takes a booth in the far back, slouching over like a kid who has fallen asleep in the car.",
+        href: "https://pitchfork.com/thepitch/there-are-unbothered-rappers-and-then-theres-deadpan-detroit-enigma-veeze/"
+      },
+      {
+        id: 1,
+        date: "April 3, 2023",
+        title: "Don’t Even Try to Put TiaCorine Into a Box",
+        description: "TiaCorine can see the end of a near two-week grind that had her ricocheting from her spot in Winston-Salem, North Carolina to New York City to schmoozing in L.A. during Grammys week, and now here in Manhattan again for live performances, meetings, and appointments with popular designers amid the February edition of Fashion Week.",
+        href: "https://pitchfork.com/features/rising/tiacorine-i-cant-wait-interview/"
+      },
+      {
+        id: 2,
         date: "May 2, 2022",
         title: "Bartees Strange: Farm-to-Table Interview",
         description: "Right off the Hudson River on Manhattan’s west side, Bartees Strange steps onto a driving range in his New Balance dad shoes and admits that his relationship with golf begins and ends with The Legend of Bagger Vance. You know, the 2000 “magical negro” flick where Will Smith plays a mysterious traveler who appears out of the darkness and helps a down-on-his-luck white war veteran...",
         href: "https://pitchfork.com/features/profile/bartees-strange-farm-to-table-interview/"
       },
       {
-        id: 1,
+        id: 3,
         date: "January 20, 2022",
         title: "Earl Sweatshirt: Sick Interview",
         description: "At heart, Earl Sweatshirt is a rap nerd. Throughout our conversation about his new album Sick!, he can’t help but veer off into tangents about the wide-ranging mix of artists, albums, and songs that slip in and out of his personal rotation. Right before he hopped on Zoom from his Los Angeles home, for instance, he was transfixed by a YouTube video from the wildly prolific underground phenomenon Rxk Nephew.",
         href: "https://pitchfork.com/features/interview/earl-sweatshirt-sick-interview/"
       },
       {
-        id: 2,
+        id: 4,
         date: "August 10, 2022",
         title: "Mercury Rapper Interview: Tabula Rasa",
         description: "On a recent afternoon at Coleman Skatepark in Manhattan’s Lower East Side, the graffiti-covered bowls and ramps are crowded enough that you can hear the crashes from a block away. Every couple of minutes the noise of decks and wheels hitting pavement is overpowered by the sound of trains crossing the Manhattan Bridge, which makes the park tremble like an earthquake.",
         href: "https://pitchfork.com/features/rising/mercury-rapper-interview-tabula-rasa/"
       },
       {
-        id: 3,
+        id: 5,
         date: "January 28, 2022",
         title: "Staysie Atoms Interview",
         description: "Staysie Atoms sinks into her bed, which also happens to be her personal studio. It’s there, slouched against the naked walls, where she records her bright, sometimes pitched-up, sometimes chopped-and-screwed, sometimes bitcrushed reimaginings of underground Memphis rap directly into her iPhone.",
         href: "https://pitchfork.com/features/rising/staysie-atoms-interview/"
       },
       {
-        id: 4,
+        id: 6,
         date: "March 31, 2021",
         title: "Navy Blue & Sage Elsesser Interview",
         description: "Sage Elsesser has an enlightening anecdote to go along with seemingly any topic. Many of them involve run-ins with bold names he’s encountered throughout the world. Some are about his love of soccer. Sitting in his cozy garden apartment in Bed-Stuy, Brooklyn, he pulls up his Arsenal squad on FIFA as he recalls the time he met the club’s longtime manager Arsène Wenger in Paris.",
         href: "https://pitchfork.com/features/rising/navy-blue-sage-elsesser-interview/"
       },
       {
-        id: 5,
+        id: 7,
         date: "May 17, 2021",
         title: "Bizzy Banks: At the Forefront of Brooklyn Drill Rap",
         description: "In the heart of East New York, Brooklyn, Bizzy Banks is carefully probing through a corner store fridge with the meticulousness of a kid in an arcade trying to pick their prize in the claw machine. “When I was really trappin’, every morning I would be in this deli early for some pancakes,” says Bizzy as he selects a small carton of Tropicana orange juice.",
         href: "https://pitchfork.com/features/rising/bizzy-banks-is-at-the-forefront-of-brooklyn-drill-rap-next-wave/"
-      }
+      },
+
     ]
   };
   
@@ -283,7 +339,8 @@ export {
     Interviews,
     Reported,
     ScenePieces,
-    FilmAndTv
+    FilmAndTv,
+    FeatureArticles
 }
 
 

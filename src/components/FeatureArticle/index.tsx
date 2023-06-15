@@ -1,46 +1,24 @@
-import { Category } from "../../../backend/tempData"
+import { FeatureArticles } from "../../../backend/tempData"
 import Link from "next/link";
-
-const FeatureArticles: Category = {
-    image: "reviews.webp",
-    imageAlt: "Reviews",
-    name: "Reviews",
-    href: "reviews",
-    articles: [
-        {
-            id: 0,
-            date: "February 1, 2023",
-            title: "Lil Yachty: Let's Start Here",
-            description: 'At a surprise listening event last Thursday, Lil Yachty introduced his new album Let’s Start Here., an unexpected pivot, with a few words every rap fan will find familiar: “I really wanted to be taken seriously as an artist, not just some SoundCloud rapper or some mumble rapper."',
-            href: "https://pitchfork.com/reviews/albums/lil-yachty-lets-start-here/"
-        },
-        // More articles...
-        {
-            id: 2,
-            date: "February 1, 2023",
-            title: "Lil Yachty: Let's Start Here",
-            description: 'At a surprise listening event last Thursday, Lil Yachty introduced his new album Let’s Start Here., an unexpected pivot, with a few words every rap fan will find familiar: “I really wanted to be taken seriously as an artist, not just some SoundCloud rapper or some mumble rapper."',
-            href: "https://pitchfork.com/reviews/albums/lil-yachty-lets-start-here/"
-        },
-    ],
-};
-
+import Image from "next/image";
 
 interface Post {
     id: number;
     date: string;
     imageUrl: string;
+    imageAlt: string;
     category: string;
     title: string;
     description: string;
     href: string;
 }
 
-const posts: Post[] = FeatureArticles.articles.map((article) => ({
+const posts: Post[] = FeatureArticles.map((article) => ({
     id: article.id,
     date: article.date,
-    imageUrl: article.image, // Replace this with the appropriate image URL
-    category: 'reviews', // Replace this with the appropriate category
+    imageUrl: article.image, 
+    imageAlt: article.imageAlt,
+    category: article.category,
     title: article.title,
     description: article.description,
     href: article.href,
@@ -65,9 +43,9 @@ export default function Example() {
                                 className="relative isolate flex flex-col gap-8 lg:flex-row"
                             >
                                 <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
-                                    <img
+                                    <Image
                                         src={post.imageUrl}
-                                        alt=""
+                                        alt={post.imageAlt}
                                         className="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
                                     />
                                     <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
