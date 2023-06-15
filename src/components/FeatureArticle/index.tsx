@@ -1,6 +1,10 @@
 import { FeatureArticles } from "../../../backend/tempData"
 import Link from "next/link";
 import Image from "next/image";
+import getConfig from 'next/config';
+
+const { publicRuntimeConfig } = getConfig();
+const { basePath } = publicRuntimeConfig;
 
 interface Post {
     id: number;
@@ -44,7 +48,7 @@ export default function Example() {
                             >
                                 <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
                                     <Image
-                                        src={require(`/backend/tempData/images/${post.imageUrl}`)}
+                                        src={require(`${basePath}/backend/tempData/images/${post.imageUrl}`)}
                                         alt={post.imageAlt}
                                         fill={true}
                                         className="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"

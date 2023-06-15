@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import profileImg from '@/assets/images/profile_pic.png'
 import { Container } from '@/components/Container'
+import getConfig from 'next/config';
+
+const { publicRuntimeConfig } = getConfig();
+const { basePath } = publicRuntimeConfig;
 
 export default function About() {
   return (
@@ -15,7 +18,7 @@ export default function About() {
                 <div className="lg:pl-20">
                     <div className="max-w-xs px-2.5 lg:max-w-none">
                         <Image
-                            src={profileImg}
+                            src={`${basePath}/assets/images/profile_pic.png`}
                             alt="portrait"
                             width={500}
                             height={500}
