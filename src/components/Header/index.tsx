@@ -241,7 +241,7 @@ function ModeToggle() {
         return () => {
             window.matchMedia("(prefers-color-scheme: dark)").removeEventListener("change", handleSystemDarkModeChange);
         };
-    }, []);
+    });
 
     return (
         <button
