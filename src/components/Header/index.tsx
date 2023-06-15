@@ -280,17 +280,19 @@ export default function Header() {
 
     return (
         <>
-            <header className="pointer-events-none relative z-50 flex flex-col max-w-7xl mx-auto">
+            <header className="pointer-events-auto relative z-50 flex flex-col max-w-7xl mx-auto">
                 <div ref={headerRef} className="top-0 z-10 h-16 pt-6">
                     <Container className="w-full">
                         <div className="flex justify-between">
                             <div className="flex flex-col items-baseline text-start">
-                                <h1 className="text-3xl font-bold text-zinc-800 dark:text-zinc-200">
-                                    {isSmallScreen ? "Alphonse" : "Alphonse Pierre"}
-                                </h1>
-                                <div className='ml-6'>
-                                    <p className="text-sm text-zinc-400 dark:text-zinc-500">Writer | Pitchfork</p>
-                                </div>
+                                <Link href="/">
+                                    <h1 className="text-3xl font-bold text-zinc-800 dark:text-zinc-200">
+                                        {isSmallScreen ? "Alphonse" : "Alphonse Pierre"}
+                                    </h1>
+                                    <div className='ml-6'>
+                                        <p className="text-sm text-zinc-400 dark:text-zinc-500">Writer | Pitchfork</p>
+                                    </div>
+                                </Link>
                             </div>
                             <div className="flex flex-1 justify-end md:justify-center">
                             </div>
