@@ -16,7 +16,7 @@ interface Post {
 const posts: Post[] = FeatureArticles.map((article) => ({
     id: article.id,
     date: article.date,
-    imageUrl: article.image, 
+    imageUrl: article.image,
     imageAlt: article.imageAlt,
     category: article.category,
     title: article.title,
@@ -24,8 +24,22 @@ const posts: Post[] = FeatureArticles.map((article) => ({
     href: article.href,
 }));
 
-const capitalizeFirstLetter = (word: string): string =>
-    word.charAt(0).toUpperCase() + word.slice(1);
+const cleanString = (str: string): string => {
+    const stringWithSpaces: string = str.replace(/-/g, ' ');
+
+    const stringWithAmpersand: string = stringWithSpaces.replace(/\band\b/g, '&');
+
+    const words: string[] = stringWithAmpersand.split(' ');
+
+    const capitalizedWords: string[] = words.map((word: string) => {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    });
+
+    const capitalizedString: string = capitalizedWords.join(' ');
+
+    return capitalizedString;
+};
+
 
 export default function Example() {
     return (
@@ -57,10 +71,10 @@ export default function Example() {
                                             {post.date}
                                         </time>
                                         <Link
-                                            href={`/${post.category}`}
+                                            href={`articles/${post.category}`}
                                             className="relative z-10 rounded-full bg-zinc-100 dark:bg-zinc-800 px-3 py-1.5 font-medium text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200"
                                         >
-                                            {capitalizeFirstLetter(post.category)}
+                                            {cleanString(post.category)}
                                         </Link>
                                     </div>
                                     <div className="group relative max-w-xl">
