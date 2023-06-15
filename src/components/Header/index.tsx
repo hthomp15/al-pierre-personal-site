@@ -296,7 +296,7 @@ export default function Header() {
                     >
                         <div className="flex justify-between">
                             <div className="flex flex-col items-baseline text-start">
-                                <h1 className="text-3xl font-bold text-black dark:text-white">
+                                <h1 className="text-3xl font-bold text-zinc-800 dark:text-zinc-200">
                                     {isSmallScreen ? "Alphonse" : "Alphonse Pierre"}
                                 </h1>
                                 <div className='ml-6'>

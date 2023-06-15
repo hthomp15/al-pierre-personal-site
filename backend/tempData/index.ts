@@ -37,7 +37,7 @@ const FeatureArticles: Array<FeatureArticle> = [
         image: "Lil-Yachty-Lets-Start-Here.webp",
         imageAlt: "Lil Yachty",
         // This should be lowercase for routing to the correct category
-        category: "reviews"
+        category: "review"
     },
     {
         id: 1,
@@ -47,7 +47,7 @@ const FeatureArticles: Array<FeatureArticle> = [
         href: "https://pitchfork.com/features/article/welcome-to-the-next-generation-of-club-rap/",
         image: "Screenshot-2023-06-14-at-9.28.59.png",
         imageAlt: "Club Rap",
-        category: "scene-pieces"
+        category: "scene-piece"
     },
 ]
 

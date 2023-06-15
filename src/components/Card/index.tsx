@@ -58,7 +58,7 @@ interface CardTitleProps {
 
 Card.Title = function CardTitle({ as: Component = 'h2', href, children }: CardTitleProps) {
   return (
-    <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+    <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-200">
       {href ? <Card.Link href={href}>{children}</Card.Link> : children}
     </Component>
   );
