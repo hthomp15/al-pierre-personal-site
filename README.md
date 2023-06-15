@@ -1,3 +1,14 @@
+Current Preview: 
+
+- Landing Page
+<img width="1139" alt="IMG_8500" src="https://github.com/hthomp15/al-pierre-personal-site/assets/92960832/567fd030-10a7-4217-a076-0f303aeec58f">
+
+- About 
+<img width="1105" alt="IMG_7256" src="https://github.com/hthomp15/al-pierre-personal-site/assets/92960832/15a99b99-a12c-44b5-b107-b4f38b54ae50">
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
