@@ -18,7 +18,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
 
   let previousPathname = usePrevious(router.pathname)
   return (
-    <div>
+    <div className="dark:bg-zinc-900 dark:ring-zinc-300/20">
       <Header />
       <main>
         <Component previousPathname={previousPathname} {...pageProps} />  
