@@ -1,9 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { TwitterIcon } from "../SocialIcons";
 import { Container } from "../Container";
-import clsx from "clsx";
 
 function SocialLink({ href, children, icon: Icon}: { href: string, children: React.ReactNode, icon: React.ComponentType<{ className: string }> }) {
     return (

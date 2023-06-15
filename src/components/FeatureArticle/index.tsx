@@ -1,10 +1,5 @@
-import { FeatureArticles } from "../../../backend/tempData"
+import { FeatureArticles } from "../../../data"
 import Link from "next/link";
-import Image from "next/image";
-import getConfig from 'next/config';
-
-const { publicRuntimeConfig } = getConfig();
-const { basePath } = publicRuntimeConfig;
 
 interface Post {
     id: number;
@@ -45,7 +40,8 @@ const cleanString = (str: string): string => {
 };
 
 
-export default function Example() {
+const FeatureArticle = () => {
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
     return (
         <div className="bg-white py-24 sm:py-32 dark:bg-zinc-900 dark:ring-zinc-300/20">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -61,10 +57,9 @@ export default function Example() {
                                 className="relative isolate flex flex-col gap-8 lg:flex-row"
                             >
                                 <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
-                                    <Image
-                                        src={require(`${basePath}/backend/tempData/images/${post.imageUrl}`)}
+                                    <img
+                                        src={`${basePath}/images/${post.imageUrl}`}
                                         alt={post.imageAlt}
-                                        fill={true}
                                         className="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
                                     />
                                     <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
@@ -75,7 +70,7 @@ export default function Example() {
                                             {post.date}
                                         </time>
                                         <Link
-                                            href={`articles/${post.category}`}
+                                            href={post.category}
                                             className="relative z-10 rounded-full bg-zinc-100 dark:bg-zinc-800 px-3 py-1.5 font-medium text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200"
                                         >
                                             {cleanString(post.category)}
@@ -106,3 +101,5 @@ export default function Example() {
         </div>
     );
 }
+
+export default FeatureArticle;

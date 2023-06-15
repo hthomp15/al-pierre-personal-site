@@ -26,6 +26,38 @@ export interface FeatureArticle {
     category: string;
 }
 
+export interface CategoryNames {
+    id: number;
+    name: string;
+}
+
+const CategoryNames: Array<CategoryNames> = [
+    {
+        id: 0,
+        name: "Reviews"
+    },
+    {
+        id: 1,
+        name: "Profiles"
+    },
+    {
+        id: 2,
+        name: "Interviews"
+    },
+    {
+        id: 3,
+        name: "Reported"
+    },
+    {
+        id: 4,
+        name: "Scene Pieces"
+    },
+    {
+        id: 5,
+        name: "Film & TV"
+    }
+]
+
 
 const FeatureArticles: Array<FeatureArticle> = [ 
     {
@@ -340,7 +372,8 @@ export {
     Reported,
     ScenePieces,
     FilmAndTv,
-    FeatureArticles
+    FeatureArticles,
+    CategoryNames
 }
 
 

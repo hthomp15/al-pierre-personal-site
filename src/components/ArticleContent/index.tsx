@@ -1,32 +1,32 @@
 import { usePathname } from 'next/navigation';
-import { Reviews, Profiles, FilmAndTv, Reported, Interviews, ScenePieces, Article, Category } from 'backend/tempData';
+import { Reviews, Profiles, FilmAndTv, Reported, Interviews, ScenePieces, Article, Category } from 'data';
 import { Card } from '@/components/Card';
 
-interface ArticleContentProps {
-    slug: string;
-  }
 
-export default function ArticleContent({ slug }: ArticleContentProps) {
 
+
+export default function ArticleContent() {
+
+    const currentPath = usePathname();
     let category: Category | undefined;
 
-    switch (slug) {
-        case 'reviews':
+    switch (currentPath) {
+        case '/reviews':
             category = Reviews
             break;
-        case 'profiles':
+        case '/profiles':
             category = Profiles
             break;
-        case 'film-and-tv':
+        case '/film-and-tv':
             category = FilmAndTv
             break;
-        case 'reported':
+        case '/reported':
             category = Reported
             break;
-        case 'scene-pieces':
+        case '/scene-pieces':
             category = ScenePieces
             break;
-        case 'interviews':
+        case '/interviews':
             category = Interviews
             break;
         default:
