@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { Container } from '@/components/Container';
-import profilePic from 'images/profile_pic.png'
+import profilePic from '../../public/images/profile_pic.png'
 
 const About: React.FC = () => {
     return (
