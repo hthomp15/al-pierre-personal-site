@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Reviews, Profiles, Interviews, Reported, ScenePieces, FilmAndTv } from '../../../data';
 
 
@@ -9,7 +10,7 @@ const WorkCategories = () => {
             {tempData.map((category, index) => (
                 <li key={`category-${index}`} className="group flex justify-center">
                     <Link href={`articles/${category.href}`} className="flex flex-col justify-center items-center">
-                        <img src={`/images/${category.image}`} width={300} height={300} alt={category.imageAlt} className="aspect-[5/6] rounded-2xl pointer-events-none object-cover group-hover:opacity-75" />
+                        <Image src={`/images/${category.image}`} width={300} height={300} alt={category.imageAlt} className="aspect-[5/6] rounded-2xl pointer-events-none object-cover group-hover:opacity-75" />
                         <p className="pointer-events-none mt-2 block truncate text-sm font-medium text-zinc-900 dark:text-zinc-200">{category.name}</p>
                     </Link>
                 </li>
