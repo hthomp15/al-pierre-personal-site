@@ -41,7 +41,7 @@ export default function SlugPage() {
   return (
     <>
       <Head>
-        <title>Alphonse Pierre - {categoryName ? cleanString(categoryName) : null}</title>
+        <title>Alphonse Pierre - Articles</title>
         <meta name="description" content={`Articles written by Alphonse Pierre. Articles include album reviews, artist interviews, profiles, scene pieces, film & tv and music journalism.`} />
         <link rel="icon" href={`/favicon.ico`} />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

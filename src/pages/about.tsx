@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { Container } from '@/components/Container';
+import profilePic from 'images/profile_pic.png'
 
 const About: React.FC = () => {
     return (
@@ -19,10 +20,8 @@ const About: React.FC = () => {
                     <div className="lg:pl-20">
                         <div className="max-w-xs px-2.5 lg:max-w-none">
                             <Image
-                                src={`/images/profile_pic.png`}
+                                src={profilePic}
                                 alt="portrait"
-                                width={500}
-                                height={500}
                                 className="aspect-square lg:rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
                             />
                         </div>

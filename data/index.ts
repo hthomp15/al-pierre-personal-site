@@ -1,3 +1,13 @@
+import reviews from '../public/images/reviews.webp';
+import profiles from '../public/images/profiles.webp';
+import interviews from '../public/images/interviews.webp';
+import reported from '../public/images/reported.webp';
+import scenePieces from '../public/images/scene-piece.webp';
+import filmAndTv from '../public/images/film-tv.webp';
+import lilYachty from '../public/images/Lil-Yachty-Lets-Start-Here.webp';
+import clubRap from '../public/images/Screenshot-2023-06-14-at-9.28.59.png';
+import { StaticImageData } from 'next/image';
+
 
 export interface Article {
     id: number;
@@ -8,7 +18,7 @@ export interface Article {
 }
 
 export interface Category {
-    image: string;
+    image: StaticImageData;
     imageAlt: string;
     name: string;
     href: string;
@@ -21,7 +31,7 @@ export interface FeatureArticle {
     title: string;
     description: string;
     href: string;
-    image: string;
+    image: StaticImageData;
     imageAlt: string;
     category: string;
 }
@@ -66,7 +76,7 @@ const FeatureArticles: Array<FeatureArticle> = [
         title: "Lil Yachty: Let's Start Here",
         description: 'At a surprise listening event last Thursday, Lil Yachty introduced his new album Let’s Start Here., an unexpected pivot, with a few words every rap fan will find familiar: “I really wanted to be taken seriously as an artist, not just some SoundCloud rapper or some mumble rapper.” This is the speech rappers are obligated to give when it comes time for the drum loop to take a backseat to guitars...',
         href: "https://pitchfork.com/reviews/albums/lil-yachty-lets-start-here/",
-        image: "Lil-Yachty-Lets-Start-Here.webp",
+        image: lilYachty,
         imageAlt: "Lil Yachty",
         // This should be lowercase for routing to the correct category
         category: "reviews"
@@ -77,7 +87,7 @@ const FeatureArticles: Array<FeatureArticle> = [
         title: "Welcome to the Next Generation of Club Rap",
         description: "One night in August, a nondescript metal venue in suburban New Jersey, just north of Newark, is the epicenter of one of the most exciting trends in rap right now. At first, the teens who fill the intimate space are bored, standing with their hands at their sides like Sims characters, as a series of local rappers mimic out-of-state styles. Then a DJ screams into the mic “RIP DJ Tim Dolla,” shouting out the Jersey Club pioneer who died weeks earlier...",
         href: "https://pitchfork.com/features/article/welcome-to-the-next-generation-of-club-rap/",
-        image: "Screenshot-2023-06-14-at-9.28.59.png",
+        image: clubRap,
         imageAlt: "Club Rap",
         category: "scene-pieces"
     },
@@ -90,7 +100,7 @@ const FeatureArticles: Array<FeatureArticle> = [
 
 
 const Reviews: Category = {
-    image: "reviews.webp",
+    image: reviews,
     imageAlt: "Reviews",
     name: "Reviews",
     href: "reviews",
@@ -141,7 +151,7 @@ const Reviews: Category = {
 }
 
 const Profiles: Category = {
-    image: "profiles.webp",
+    image: profiles,
     imageAlt: "Profiles",
     name: "Profiles",
     href: "profiles",
@@ -208,7 +218,7 @@ const Profiles: Category = {
   
 
   const Interviews: Category = {
-    image: "interviews.webp",
+    image: interviews,
     imageAlt: "Interviews",
     name: "Interviews",
     href: "interviews",
@@ -238,7 +248,7 @@ const Profiles: Category = {
   };
 
   const Reported: Category = {
-    image: "reported.webp",
+    image: reported,
     imageAlt: "Reported",
     name: "Reported",
     href: "reported",
@@ -269,7 +279,7 @@ const Profiles: Category = {
   
 
   const ScenePieces: Category = {
-    image: "scene-piece.webp",
+    image: scenePieces,
     imageAlt: "Scene Pieces",
     name: "Scene Pieces",
     href: "scene-pieces",
@@ -314,7 +324,7 @@ const Profiles: Category = {
   
 
   const FilmAndTv: Category = {
-    image: "film-tv.webp",
+    image: filmAndTv,
     imageAlt: "Film and TV",
     name: "Film and TV",
     href: "film-and-tv",
