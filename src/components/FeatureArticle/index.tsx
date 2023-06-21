@@ -69,7 +69,7 @@ const FeatureArticle = () => {
                                             {post.date}
                                         </time>
                                         <Link
-                                            href={post.category}
+                                            href={`/articles/${post.category}`}
                                             className="relative z-10 rounded-full bg-zinc-100 dark:bg-zinc-800 px-3 py-1.5 font-medium text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200"
                                         >
                                             {cleanString(post.category)}

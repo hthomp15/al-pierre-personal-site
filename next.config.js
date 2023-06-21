@@ -2,5 +2,6 @@
 
 module.exports = {
   trailingSlash: true,
+  pageExtensions: ['js', 'tsx', 'ts'],
 }
 

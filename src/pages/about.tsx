@@ -8,7 +8,8 @@ const About: React.FC = () => {
                 <title>Alphonse Pierre - About</title>
                 <meta
                     name="description"
-                    content="Aplhonse Pierre, a writer and music critic from New York City."
+                    content="Aplhonse Pierre, a writer and music critic from New York City.  My work has appeared in Pitchfork, Complex, the Fader, Interview Magazine, Fact Magazine,
+                    Passion of the Weiss, Vice, and more."
                 />
                 <link rel="icon" href={`/favicon.ico`} />
             </Head>

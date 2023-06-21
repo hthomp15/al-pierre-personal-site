@@ -11,22 +11,22 @@ export default function ArticleContent() {
     let category: Category | undefined;
 
     switch (currentPath) {
-        case '/reviews/':
+        case '/articles/reviews/':
             category = Reviews
             break;
-        case '/profiles/':
+        case '/articles/profiles/':
             category = Profiles
             break;
-        case '/film-and-tv/':
+        case '/articles/film-and-tv/':
             category = FilmAndTv
             break;
-        case '/reported/':
+        case '/articles/reported/':
             category = Reported
             break;
-        case '/scene-pieces/':
+        case '/articles/scene-pieces/':
             category = ScenePieces
             break;
-        case '/interviews/':
+        case '/articles/interviews/':
             category = Interviews
             break;
         default:
