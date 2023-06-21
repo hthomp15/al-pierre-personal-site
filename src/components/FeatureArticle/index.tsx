@@ -60,6 +60,7 @@ const FeatureArticle = () => {
                                     <Image
                                         src={post.imageUrl}
                                         alt={post.imageAlt}
+                                        sizes="(min-width: 1024px) 640px, (min-width: 768px) 50vw, 100vw"
                                         className="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
                                     />
                                     <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />

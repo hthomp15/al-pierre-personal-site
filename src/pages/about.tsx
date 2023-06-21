@@ -22,6 +22,7 @@ const About: React.FC = () => {
                             <Image
                                 src={profilePic}
                                 alt="portrait"
+                                sizes="(min-width: 1024px) 640px, (min-width: 768px) 50vw, 100vw"
                                 className="aspect-square lg:rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
                             />
                         </div>
