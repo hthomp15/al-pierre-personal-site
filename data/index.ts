@@ -5,7 +5,7 @@ import reported from '../public/images/reported.webp';
 import scenePieces from '../public/images/scene-piece.webp';
 import filmAndTv from '../public/images/film-tv.webp';
 import lilYachty from '../public/images/Lil-Yachty-Lets-Start-Here.webp';
-import clubRap from '../public/images/Screenshot-2023-06-14-at-9.28.59.png';
+import clubRap from '../public/images/Screenshot-2023-06-14-at-9.28.59.webp';
 import { StaticImageData } from 'next/image';
 
 
@@ -40,33 +40,6 @@ export interface CategoryNames {
     id: number;
     name: string;
 }
-
-const CategoryNames: Array<CategoryNames> = [
-    {
-        id: 0,
-        name: "Reviews"
-    },
-    {
-        id: 1,
-        name: "Profiles"
-    },
-    {
-        id: 2,
-        name: "Interviews"
-    },
-    {
-        id: 3,
-        name: "Reported"
-    },
-    {
-        id: 4,
-        name: "Scene Pieces"
-    },
-    {
-        id: 5,
-        name: "Film & TV"
-    }
-]
 
 
 const FeatureArticles: Array<FeatureArticle> = [ 
@@ -383,7 +356,6 @@ export {
     ScenePieces,
     FilmAndTv,
     FeatureArticles,
-    CategoryNames
 }
 
 
