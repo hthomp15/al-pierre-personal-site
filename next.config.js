@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 
-const withExportImages = require('next-export-optimize-images')
-
-module.exports = withExportImages({
+module.exports = {
   trailingSlash: true,
-})
+  pageExtensions: ['js', 'tsx', 'ts'],
+}
 
