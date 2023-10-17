@@ -40,10 +40,14 @@ const modeScript = `
 export default function Document() {
   return (
     <Html className="h-full antialiased" lang="en">
+                 {/* @ts-expect-error Server Component */}
+
       <Head />
       <script dangerouslySetInnerHTML={{ __html: modeScript }} />
       <body>
         <Main />
+                   {/* @ts-expect-error Server Component */}
+
         <NextScript />
       </body>
     </Html>

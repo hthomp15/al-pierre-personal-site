@@ -21,6 +21,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
     <div className="dark:bg-zinc-900 dark:ring-zinc-300/20">
       <Header />
       <main>
+        {/* @ts-expect-error Server Component */}
         <Component previousPathname={previousPathname} {...pageProps} />  
       </main>
       <Footer />
