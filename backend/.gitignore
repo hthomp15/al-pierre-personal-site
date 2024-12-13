@@ -1,0 +1,58 @@
+# Node.js dependencies
+/node_modules/
+
+# Build output
+/dist/
+/build/
+/out/
+/public/
+
+# dotenv environment variables
+.env
+.env.local
+.env.*.local
+
+# PostgreSQL database files (if you use local storage for DB)
+*.db
+*.sqlite
+*.sqlite3
+
+# AWS credentials (don't store these in source control)
+*.env.*.json
+.aws/
+
+# Logs
+*.log
+*.logs
+
+# Debug files
+*.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.bak
+*.swp
+
+# Typescript build info
+*.tsbuildinfo
+
+# Next.js specific
+/.next/
+/out/
+
+# Vercel (hosting)
+/.vercel/
+
+# Tailwind CSS (if applicable)
+tailwind.config.js
+
+# IDE specific
+.idea/
+.vscode/
+
+# NPM/Yarn lock files (if needed, depending on your environment)
+# package-lock.json
+# yarn.lock
