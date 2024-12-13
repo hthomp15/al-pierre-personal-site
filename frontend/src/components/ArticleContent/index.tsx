@@ -1,5 +1,5 @@
 import { usePathname } from 'next/navigation';
-import { Reviews, Profiles, FilmAndTv, Reported, Interviews, ScenePieces, Article, Category } from 'data';
+import { Reviews, Profiles, FilmAndTv, Reported, Interviews, ScenePieces, Article, Category } from 'frontend/data';
 import { Card } from '@/components/Card';
 
 
